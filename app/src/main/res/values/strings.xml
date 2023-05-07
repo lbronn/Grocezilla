@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Grocezilla</string>
+    <string name="welcomeback">Welcome Back</string>
+    <string name="signin">Sign in to continue</string>
+    <string name="email_string">Email</string>
+    <string name="groce_zilla_com_string">groce@zilla.com</string>
+    <string name="password_string">Password</string>
+    <string name="password_ek1_string">Password</string>
+    <string name="checkbox_string">Remember me</string>
+    <string name="forgot_password_string">Forgot Password</string>
+    <string name="don_t_have_account__string">Dont have account?</string>
+    <string name="create">Create a new account</string>
+    <string name="login_string">LOGIN</string>
+    <string name="login">LOGIN</string>
+    <string name="awesome">Awesome</string>
+
+</resources>
