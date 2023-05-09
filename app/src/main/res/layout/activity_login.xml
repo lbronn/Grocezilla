@@ -175,7 +175,7 @@
 
 
         <CheckBox
-            android:id="@+id/myCheckBox"
+            android:id="@+id/loginRemember"
             android:layout_width="130dp"
             android:layout_height="30dp"
             android:layout_marginLeft="53dp"
