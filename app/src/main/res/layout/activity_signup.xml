@@ -6,4 +6,272 @@
     android:layout_height="match_parent"
     tools:context=".signup">
 
+
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/sbg" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/logowelcome"
+        android:layout_width="411dp"
+        android:layout_height="220dp"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/image_removebg_preview__12__2"
+            android:layout_width="142dp"
+            android:layout_height="119dp"
+            android:layout_marginStart="127dp"
+            android:layout_marginTop="45dp"
+            android:foregroundGravity="center_vertical"
+            android:contentDescription="image_removebg_preview__12__2"
+            android:src="@drawable/bglogo" />
+
+            <TextView
+                android:id="@+id/welcome_back"
+                android:layout_width="255dp"
+                android:layout_height="49.5dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginLeft="80dp"
+                android:layout_marginTop="165dp"
+                android:gravity="center"
+                android:text="Create New Account"
+                android:textColor="@color/orange"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/group_2"
+        android:layout_marginTop="220dp"
+        android:layout_marginStart="0dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/grname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="390dp">
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="100dp"
+                android:layout_height="29.5dp"
+                android:gravity="left|center"
+                android:layout_marginLeft="57dp"
+                android:layout_marginTop="23dp"
+                android:text="First Name"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                />
+            <View
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="53dp"
+                android:layout_marginLeft="57dp"
+                android:background="@drawable/signup_rect" />
+
+
+            <EditText
+                android:id="@+id/editname"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="58dp"
+                android:autofillHints=""
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:gravity="left"
+                android:hint="@string/enter_your_first_name"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                tools:ignore="TextFields,TouchTargetSizeCheck" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/grlname"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="110dp"
+            android:layout_marginBottom="310dp">
+
+            <TextView
+                android:id="@+id/lname"
+                android:layout_width="100dp"
+                android:layout_height="29.5dp"
+                android:gravity="left|center"
+                android:layout_marginLeft="57dp"
+                android:layout_marginTop="10dp"
+                android:text="Last Name"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                />
+            <View
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginLeft="57dp"
+                android:background="@drawable/signup_rect" />
+
+
+            <EditText
+                android:id="@+id/editlname"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="46dp"
+                android:autofillHints=""
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:gravity="left"
+                android:hint="@string/enter_your_last_name"
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                tools:ignore="TextFields,TouchTargetSizeCheck" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/gremail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="205dp"
+            android:layout_marginBottom="210dp">
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="100dp"
+                android:layout_height="29.5dp"
+                android:gravity="left|center"
+                android:layout_marginLeft="57dp"
+                android:layout_marginTop="10dp"
+                android:text="Email"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                />
+            <View
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginLeft="57dp"
+                android:background="@drawable/signup_rect" />
+
+
+            <EditText
+                android:id="@+id/editemail"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="46dp"
+                android:autofillHints=""
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:gravity="left"
+                android:hint="@string/enter_your_email"
+                android:inputType="textWebEmailAddress"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                tools:ignore="TextFields,TouchTargetSizeCheck" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/grpass"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="297dp"
+            android:layout_marginBottom="120dp">
+
+            <TextView
+                android:id="@+id/pass"
+                android:layout_width="100dp"
+                android:layout_height="29.5dp"
+                android:gravity="left|center"
+                android:layout_marginLeft="57dp"
+                android:layout_marginTop="10dp"
+                android:text="Password"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+
+                />
+            <View
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="41dp"
+                android:layout_marginLeft="57dp"
+                android:background="@drawable/signup_rect" />
+
+            <EditText
+                android:id="@+id/passEdit"
+                android:layout_width="260dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="48dp"
+
+                android:autofillHints=""
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:gravity="left"
+                android:hint="@string/enter_your_password"
+                android:inputType="textPassword"
+                android:textColor="#000000"
+                android:textColorHint="#000000"
+                android:textSize="16sp"
+                tools:ignore="TextFields,TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/grbtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="420dp"
+        android:layout_marginBottom="40dp">
+
+        <Button
+            android:id="@+id/btnSignup"
+            android:layout_width="300dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginLeft="57dp"
+            android:background="#D9D9D9"
+            android:text="SIGN UP"
+            android:textSize="18sp"
+            android:textColor="@color/orange"
+            android:backgroundTint="#D9D9D9"
+            android:textStyle="bold"
+            android:onClick="onClick"
+
+
+            />
+
+    </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

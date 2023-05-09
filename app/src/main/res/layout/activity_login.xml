@@ -94,7 +94,7 @@
             android:text="@string/email_string"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
+
             />
         <View
             android:layout_width="300dp"
@@ -105,7 +105,7 @@
 
 
         <EditText
-            android:id="@+id/groce_zilla_com"
+            android:id="@+id/editEmail"
             android:layout_width="280dp"
             android:layout_height="40dp"
             android:layout_marginLeft="65dp"
@@ -115,12 +115,12 @@
             android:ems="10"
             android:fontFamily="sans-serif"
             android:gravity="left"
-            android:hint="@string/groce_zilla_com_string"
-            android:inputType="textPersonName"
+            android:hint="@string/email"
+            android:inputType="textWebEmailAddress"
             android:textColor="@color/white"
             android:textColorHint="#FFFFFE"
             android:textSize="16sp"
-            android:textStyle="bold"
+
             tools:ignore="TextFields,TouchTargetSizeCheck" />
 
         <TextView
@@ -134,7 +134,7 @@
             android:text="@string/password_string"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:textStyle="bold"
+
             />
         <View
             android:layout_width="300dp"
@@ -145,7 +145,7 @@
 
 
         <EditText
-            android:id="@+id/passEdit"
+            android:id="@+id/editPass"
             android:layout_width="260dp"
             android:layout_height="40dp"
             android:layout_marginLeft="85dp"
@@ -160,7 +160,7 @@
             android:textColor="@color/white"
             android:textColorHint="#FFFFFE"
             android:textSize="16sp"
-            android:textStyle="bold"
+
             tools:ignore="TextFields,TouchTargetSizeCheck" />
 
         <ImageView
@@ -183,7 +183,7 @@
             android:text="Remember me"
             android:textColor="@color/white"
             android:textSize="14dp"
-            android:textStyle="bold"
+
             tools:ignore="TextSizeCheck" />
         <TextView
             android:id="@+id/forgot"
@@ -195,7 +195,7 @@
             android:text="@string/forgot_password_string"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:textStyle="bold" />
+            />
 
 
         <RelativeLayout
@@ -205,26 +205,24 @@
             android:layout_width="match_parent"
             android:layout_height="60dp">
 
-            <View
+
+            <Button
+                android:id="@+id/btnLogin"
                 android:layout_width="300dp"
                 android:layout_height="50dp"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
                 android:layout_marginLeft="57dp"
-                android:background="@drawable/rectangle_133_shape" />
-
-            <TextView
-                android:id="@+id/login"
-                android:layout_width="80dp"
-                android:layout_height="30dp"
-                android:layout_marginLeft="165dp"
-                android:layout_marginTop="15dp"
-                android:gravity="center"
-                android:layout_gravity="center_horizontal|center"
-                android:text="@string/login"
+                android:background="@color/white"
+                android:text="LOGIN"
+                android:textSize="18sp"
                 android:textColor="@color/orange"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:onClick="onClick"
+
+                />
+
+
 
 
         </RelativeLayout>
@@ -239,7 +237,7 @@
             android:text="@string/don_t_have_account__string"
             android:textColor="@color/white"
             android:textSize="14sp"
-            android:textStyle="bold" />
+             />
 
         <TextView
             android:id="@+id/createacc"
@@ -253,6 +251,8 @@
             android:textColor="@color/red"
             android:textSize="14sp"
             android:textStyle="bold" />
+
+
 
     </RelativeLayout>
 
