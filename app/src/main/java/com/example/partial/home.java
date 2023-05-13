@@ -10,7 +10,15 @@ import android.widget.TextView;
 
 public class home extends AppCompatActivity {
     ImageView iChat;
+    ImageView iSocial;
+    ImageView iHome;
+    ImageView iGrocery;
+    ImageView iProfile;
     TextView tChat;
+    TextView tSocial;
+    TextView tHome;
+    TextView tGrocery;
+    TextView tProfile;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

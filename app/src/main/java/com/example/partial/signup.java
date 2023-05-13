@@ -17,6 +17,8 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class signup extends AppCompatActivity {
     Button signup;
@@ -25,6 +27,8 @@ public class signup extends AppCompatActivity {
     EditText email;
     EditText password;
     FirebaseAuth mAuth;
+//    FirebaseDatabase database;
+//    DatabaseReference reference;
 
 //    @Override
 //    public void onStart() {
@@ -37,6 +41,50 @@ public class signup extends AppCompatActivity {
 //            finish();
 //        }
 //    }
+
+    public Boolean validateEmail() {
+        String valEmail = email.getText().toString();
+        if(valEmail.isEmpty()) {
+            email.setError("Email Address cannot be empty!");
+            return false;
+        } else {
+            email.setError(null);
+            return true;
+        }
+    }
+
+    public Boolean validatePassword() {
+        String valEmail = password.getText().toString();
+        if(valEmail.isEmpty()) {
+            password.setError("Password cannot be empty!");
+            return false;
+        } else {
+            password.setError(null);
+            return true;
+        }
+    }
+
+    public Boolean validateFName() {
+        String valEmail = firstName.getText().toString();
+        if(valEmail.isEmpty()) {
+            firstName.setError("First name cannot be empty!");
+            return false;
+        } else {
+            firstName.setError(null);
+            return true;
+        }
+    }
+
+    public Boolean validateLName() {
+        String valEmail = lastName.getText().toString();
+        if(valEmail.isEmpty()) {
+            lastName.setError("Last name cannot be empty!");
+            return false;
+        } else {
+            lastName.setError(null);
+            return true;
+        }
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,14 +100,27 @@ public class signup extends AppCompatActivity {
         signup.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String emailtoStr, passwordtoStr;
+//                database = FirebaseDatabase.getInstance();
+//                reference = database.getReference("users");
+                String firstNametoStr, lastNametoStr, emailtoStr, passwordtoStr;
+                firstNametoStr = firstName.getText().toString();
+                lastNametoStr = lastName.getText().toString();
                 emailtoStr = email.getText().toString();
                 passwordtoStr = password.getText().toString();
-                if(TextUtils.isEmpty(emailtoStr)) {
+
+                if(!validateFName()) {
+                    Toast.makeText(signup.this, "Please enter your first name.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(!validateLName()) {
+                    Toast.makeText(signup.this, "Please enter your last name.", Toast.LENGTH_SHORT).show();
+                    return;
+                }
+                if(!validateEmail()) {
                     Toast.makeText(signup.this, "Please enter an email.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(TextUtils.isEmpty(passwordtoStr)) {
+                if(!validatePassword()) {
                     Toast.makeText(signup.this, "Please enter a password.", Toast.LENGTH_SHORT).show();
                     return;
                 }
@@ -69,6 +130,8 @@ public class signup extends AppCompatActivity {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
                                 if (task.isSuccessful()) {
+//                                    HelperClass helperClass = new HelperClass(firstNametoStr, lastNametoStr, emailtoStr, passwordtoStr);
+//                                    reference.child(firstNametoStr).setValue(helperClass);
                                     Toast.makeText(signup.this, "Signup success, welcome to Grocezilla!",
                                             Toast.LENGTH_SHORT).show();
                                     Intent i = new Intent(signup.this, login.class);

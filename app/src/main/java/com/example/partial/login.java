@@ -41,6 +41,28 @@ public class login extends AppCompatActivity {
 //        }
 //    }
 
+    public Boolean validateEmail() {
+        String valEmail = email.getText().toString();
+        if(valEmail.isEmpty()) {
+            email.setError("Email Address cannot be empty!");
+            return false;
+        } else {
+            email.setError(null);
+            return true;
+        }
+    }
+
+    public Boolean validatePassword() {
+        String valEmail = password.getText().toString();
+        if(valEmail.isEmpty()) {
+            password.setError("Password cannot be empty!");
+            return false;
+        } else {
+            password.setError(null);
+            return true;
+        }
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -77,11 +99,12 @@ public class login extends AppCompatActivity {
                 String emailtoStr, passwordtoStr;
                 emailtoStr = email.getText().toString();
                 passwordtoStr = password.getText().toString();
-                if(TextUtils.isEmpty(emailtoStr)) {
+
+                if(!validateEmail()) {
                     Toast.makeText(login.this, "Please enter an email.", Toast.LENGTH_SHORT).show();
                     return;
                 }
-                if(TextUtils.isEmpty(passwordtoStr)) {
+                if(!validatePassword()) {
                     Toast.makeText(login.this, "Please enter a password.", Toast.LENGTH_SHORT).show();
                     return;
                 }
