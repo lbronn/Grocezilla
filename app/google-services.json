@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "489579764719",
+    "project_id": "grocezilla-loginandsignup",
+    "storage_bucket": "grocezilla-loginandsignup.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:489579764719:android:6b6f78d831b87456a7f41a",
+        "android_client_info": {
+          "package_name": "com.example.partial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "489579764719-vbu9ognpf85jot72utvhrhff0g7kakcj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB32kteO8vBeFwa4pAl7HGGRNFOXI9cctI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "489579764719-vbu9ognpf85jot72utvhrhff0g7kakcj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

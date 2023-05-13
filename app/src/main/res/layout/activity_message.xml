@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".message">
+
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="112dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:layout_marginRight="112dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintVertical_bias="0.391"
+            app:srcCompat="@drawable/_9" />
+
+        <RelativeLayout
+            android:id="@+id/up"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="43dp"
+                android:layout_height="43dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="47dp"
+                android:background="@drawable/back" />
+
+            <TextView
+                android:id="@+id/welcome_back"
+                android:layout_width="255dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal|center"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="80dp"
+                android:gravity="left|center"
+                android:text="@string/receiver"
+                android:lineSpacingExtra="10dp"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="200dp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/messagebg_rect" />
+
+        <RelativeLayout
+            android:id="@+id/send"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="335dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="640dp"
+                android:layout_marginBottom="38dp"
+                android:background="@drawable/message_rect" />
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="330dp"
+
+                android:layout_marginTop="650dp"
+                android:layout_marginBottom="47dp"
+                android:background="@drawable/s1" />
+
+            <EditText
+                android:id="@+id/editname"
+                android:layout_width="280dp"
+                android:layout_height="40dp"
+                android:layout_marginLeft="65dp"
+                android:layout_marginTop="648dp"
+                android:autofillHints=""
+                android:backgroundTint="@android:color/transparent"
+                android:ems="10"
+                android:fontFamily="sans-serif"
+                android:gravity="left"
+                android:hint="Type your message here..."
+                android:inputType="textPersonName"
+                android:textColor="#000000"
+                android:textColorHint="#999595"
+                android:textSize="16sp"
+                android:foregroundTint="@color/orange"
+
+                tools:ignore="TextFields,TouchTargetSizeCheck" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

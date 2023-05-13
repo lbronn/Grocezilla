@@ -19,10 +19,11 @@
             app:srcCompat="@drawable/_7" />
 
 
-
     </RelativeLayout>
 
     <!-- logo&welcome-->
+
+    <!-- login -->
     <RelativeLayout
         android:id="@+id/logowelcome"
         android:layout_width="411dp"
@@ -35,8 +36,8 @@
             android:layout_height="119dp"
             android:layout_marginStart="127dp"
             android:layout_marginTop="120dp"
-            android:foregroundGravity="center_vertical"
             android:contentDescription="image_removebg_preview__12__2"
+            android:foregroundGravity="center_vertical"
             android:src="@drawable/bglogo" />
 
         <RelativeLayout
@@ -75,7 +76,6 @@
 
     </RelativeLayout>
 
-    <!-- login -->
     <RelativeLayout
             android:id="@+id/group_2"
             android:layout_marginTop="379dp"
@@ -186,7 +186,7 @@
 
             tools:ignore="TextSizeCheck" />
         <TextView
-            android:id="@+id/forgot"
+            android:id="@+id/forgotPassword"
             android:layout_width="110dp"
             android:layout_height="30dp"
             android:gravity="left|center"

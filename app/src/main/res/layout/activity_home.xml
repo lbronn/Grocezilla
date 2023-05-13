@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+
+
+    <ScrollView
+        android:id="@+id/scrollhome"
+        android:layout_width="409dp"
+        android:layout_height="669dp"
+        android:background="@drawable/_8"
+        android:theme="@style/Theme.btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias=".5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RelativeLayout
+            android:id="@+id/group_1"
+            android:layout_width="411dp"
+            android:layout_height="1295dp"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            tools:layout_editor_absoluteY="102dp">
+
+
+            <RelativeLayout
+                android:id="@+id/group_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginStart="0dp"
+                android:layout_marginTop="0dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/guided"
+                    android:layout_width="290dp"
+                    android:layout_height="49.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginStart="-5dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="@string/guided_journals"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/yourplace"
+                    android:layout_width="270dp"
+                    android:layout_height="37.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginStart="7dp"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:text="@string/your_safe_place_to_record_and_reflect"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/journal"
+                android:layout_width="match_parent"
+                android:layout_height="235dp"
+                android:layout_marginTop="95dp">
+
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="195dp"
+                    android:layout_marginStart="40dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/home_shadow" />
+
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:layout_marginStart="34dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/home_rect" />
+
+                <TextView
+                    android:id="@+id/reflect"
+                    android:layout_width="270dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginStart="55dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="left"
+                    android:text="@string/reflect_on_where_you_re_at"
+                    android:textColor="#000000"
+                    android:textSize="33sp"
+                    android:textStyle="bold"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.0"/>
+
+                <Button
+                    android:id="@+id/btnJournal"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="80dp"
+                    android:text="Write a short journal"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+
+                    android:onClick="onClick"
+
+                    />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/group_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="320dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/todays"
+                    android:layout_width="290dp"
+                    android:layout_height="49.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="-5dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="@string/today_s_task"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/yourtask"
+                    android:layout_width="270dp"
+                    android:layout_height="37.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:text="@string/your_task_and_objectives"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/task"
+                android:layout_width="500dp"
+                android:layout_height="215dp"
+                android:layout_marginTop="415dp">
+
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="195dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/home_shadow" />
+
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/home_rect" />
+
+                <TextView
+                    android:id="@+id/start_todo"
+                    android:layout_width="270dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="left"
+                    android:text="@string/start_to_be_organized_and_be_on_track"
+                    android:textColor="#000000"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.0"/>
+
+                <Button
+                    android:id="@+id/btnJot"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="80dp"
+                    android:text="Jot Down Task"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+
+                    android:onClick="onClick"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/group_4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="635dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/purchase"
+                    android:layout_width="290dp"
+                    android:layout_height="49.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="-5dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="Purchase History"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/yourroad"
+                    android:layout_width="270dp"
+                    android:layout_height="37.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:text="Your road to financial freedom"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/history"
+                android:layout_width="500dp"
+                android:layout_height="215dp"
+                android:layout_marginTop="730dp">
+
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="195dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/home_shadow" />
+
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/home_rect" />
+
+                <TextView
+                    android:id="@+id/never"
+                    android:layout_width="270dp"
+                    android:layout_height="140dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="left"
+                    android:text="Never lose &#10;track of your &#10;spending"
+                    android:textColor="#000000"
+                    android:textSize="33sp"
+                    android:textStyle="bold"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.0"/>
+
+                <Button
+                    android:id="@+id/btnWrite"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="80dp"
+                    android:text="View History"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+
+                    android:onClick="onClick"
+
+                    />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/group_5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="0dp"
+                android:layout_marginTop="950dp"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/grocery"
+                    android:layout_width="290dp"
+                    android:layout_height="49.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="-5dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="Grocery List"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/yourticket"
+                    android:layout_width="270dp"
+                    android:layout_height="37.5dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="50dp"
+                    android:gravity="center"
+                    android:text="Your ticket to a well-stocked pantry"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/grocerylist"
+                android:layout_width="500dp"
+                android:layout_height="225dp"
+                android:layout_marginTop="1045dp">
+
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="195dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="21dp"
+                    android:background="@drawable/home_shadow" />
+
+                <View
+                    android:layout_width="340dp"
+                    android:layout_height="200dp"
+                    android:layout_marginLeft="34dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/home_rect" />
+
+                <TextView
+                    android:id="@+id/start"
+                    android:layout_width="270dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal|center"
+                    android:layout_marginLeft="55dp"
+                    android:layout_marginTop="20dp"
+                    android:gravity="left"
+                    android:text="Start to be&#10;organized and&#10;be on track"
+                    android:textColor="#000000"
+                    android:textSize="33sp"
+                    android:textStyle="bold"
+                    android:lineSpacingExtra="3dp"
+                    android:lineSpacingMultiplier="1.0"/>
+
+                <Button
+                    android:id="@+id/btnList"
+                    android:layout_width="250dp"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="150dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginStart="80dp"
+                    android:text="grocery list"
+                    android:textSize="14sp"
+                    android:textColor="@color/white"
+
+                    android:onClick="onClick"
+
+                    />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="667dp">
+
+        <ImageView
+            android:id="@+id/homeic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="190dp"
+            app:srcCompat="@drawable/home_icon" />
+
+        <TextView
+            android:id="@+id/hometxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Home"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/chatic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="100dp"
+            app:srcCompat="@drawable/chat_icon" />
+
+        <TextView
+            android:id="@+id/chattxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Chat"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/groceryic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="280dp"
+            app:srcCompat="@drawable/grocery_icon" />
+
+        <TextView
+            android:id="@+id/grocerytxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="275dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Grocery"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/useric"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="360dp"
+            app:srcCompat="@drawable/user_icon" />
+
+        <TextView
+            android:id="@+id/usertxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="358dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/communityic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/community_icon" />
+
+        <TextView
+            android:id="@+id/communitytxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Social"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+
+
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
