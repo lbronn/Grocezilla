@@ -183,8 +183,8 @@
             android:text="Remember me"
             android:textColor="@color/white"
             android:textSize="14dp"
-
             tools:ignore="TextSizeCheck" />
+
         <TextView
             android:id="@+id/forgotPassword"
             android:layout_width="110dp"
@@ -196,7 +196,6 @@
             android:textColor="@color/white"
             android:textSize="14sp"
             />
-
 
         <RelativeLayout
             android:id="@+id/btnlogin"

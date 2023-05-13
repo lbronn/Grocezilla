@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -23,6 +24,12 @@
             android:exported="false" />
         <activity
             android:name=".message"
+            android:exported="false" />
+        <activity
+            android:name=".forgotpassword"
+            android:exported="false" />
+        <activity
+            android:name=".HelperClass"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

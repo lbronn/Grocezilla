@@ -1,6 +1,7 @@
 package com.example.partial;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -23,6 +24,7 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class login extends AppCompatActivity {
     TextView createAccount;
+    TextView forgotPass;
     Button login;
     EditText email;
     EditText password;
@@ -71,6 +73,7 @@ public class login extends AppCompatActivity {
         email = findViewById(R.id.editEmail);
         password = findViewById(R.id.editPass);
         login = findViewById(R.id.btnLogin);
+        forgotPass = findViewById(R.id.forgotPassword);
         remember = findViewById(R.id.loginRemember);
         createAccount = findViewById(R.id.createacc);
 
@@ -126,6 +129,15 @@ public class login extends AppCompatActivity {
                                 }
                             }
                         });
+            }
+        });
+
+        forgotPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(login.this, forgotpassword.class);
+                startActivity(i);
+                finish();
             }
         });
 
