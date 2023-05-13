@@ -22,6 +22,9 @@
             android:name=".login"
             android:exported="false" />
         <activity
+            android:name=".message"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

@@ -188,7 +188,7 @@
                 android:ems="10"
                 android:fontFamily="sans-serif"
                 android:gravity="left"
-                android:hint="@string/enter_your_email"
+                android:hint="@string/enter_your_email_address"
                 android:inputType="textWebEmailAddress"
                 android:textColor="#000000"
                 android:textColorHint="#000000"
