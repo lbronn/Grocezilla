@@ -21,6 +21,7 @@ public class home extends AppCompatActivity {
     TextView tGrocery;
     TextView tProfile;
     Button task;
+    Button journal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +30,7 @@ public class home extends AppCompatActivity {
         iChat = findViewById(R.id.chatic);
         tChat = findViewById(R.id.chattxt);
         task = findViewById(R.id.btnJot);
+        journal = findViewById(R.id.btnJournal);
         iHome = findViewById(R.id.homeic);
         tHome = findViewById(R.id.hometxt);
 
@@ -72,6 +74,15 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(home.this, TaskAdder.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        journal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, featurejounal.class);
                 startActivity(i);
                 finish();
             }
