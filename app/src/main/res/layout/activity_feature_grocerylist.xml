@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".feature_grocerylist">
+
+    <RelativeLayout
+        android:id="@+id/group_1"
+        android:layout_width="411dp"
+        android:layout_height="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/grocery"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:gravity="left"
+            android:text="Grocery Lists"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/addlist"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal|center"
+            android:layout_marginStart="316dp"
+            android:layout_marginTop="32dp"
+            android:gravity="right"
+            android:text="Add list"
+            android:textColor="@color/orange"
+            android:textSize="14sp"
+            />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="667dp">
+
+
+        <ImageView
+            android:id="@+id/homeic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="190dp"
+            app:srcCompat="@drawable/home_icon" />
+
+        <TextView
+            android:id="@+id/hometxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="190dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Home"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/chatic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="100dp"
+            app:srcCompat="@drawable/chat_icon" />
+
+        <TextView
+            android:id="@+id/chattxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="102dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Chat"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/groceryic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="280dp"
+            app:srcCompat="@drawable/grocery_icon" />
+
+        <TextView
+            android:id="@+id/grocerytxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="275dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Grocery"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/useric"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="360dp"
+            app:srcCompat="@drawable/user_icon" />
+
+        <TextView
+            android:id="@+id/usertxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="358dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Profile"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+        <ImageView
+            android:id="@+id/communityic"
+            android:layout_width="30dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            app:srcCompat="@drawable/community_icon" />
+
+        <TextView
+            android:id="@+id/communitytxt"
+            android:layout_width="50dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="40dp"
+            android:gravity="left|center"
+            android:layout_gravity="center_horizontal|center"
+            android:text="Social"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            />
+
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

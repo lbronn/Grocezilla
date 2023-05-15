@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "977674049244",
+    "project_id": "grocezilla-dbtasks",
+    "storage_bucket": "grocezilla-dbtasks.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:977674049244:android:adb810dbe02aeea9cd4619",
+        "android_client_info": {
+          "package_name": "com.example.partial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "977674049244-5tvia7u5lpgbhpdvvahe4i3ssn0fjful.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwz2UWSJVFym2ORTFg4If66GYQY0sgsxU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "977674049244-5tvia7u5lpgbhpdvvahe4i3ssn0fjful.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

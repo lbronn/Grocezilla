@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -19,6 +20,7 @@ public class home extends AppCompatActivity {
     TextView tHome;
     TextView tGrocery;
     TextView tProfile;
+    Button task;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +28,9 @@ public class home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         iChat = findViewById(R.id.chatic);
         tChat = findViewById(R.id.chattxt);
+        task = findViewById(R.id.btnJot);
+        iHome = findViewById(R.id.homeic);
+        tHome = findViewById(R.id.hometxt);
 
         iChat.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -40,6 +45,33 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(home.this, message.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        iHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, home.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        tHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, home.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        task.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, TaskAdder.class);
                 startActivity(i);
                 finish();
             }

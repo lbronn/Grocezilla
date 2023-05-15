@@ -32,6 +32,21 @@
             android:name=".HelperClass"
             android:exported="false" />
         <activity
+            android:name=".feature_grocerylist"
+            android:exported="false" />
+        <activity
+            android:name=".featurejounal"
+            android:exported="false" />
+        <activity
+            android:name=".AddTasks"
+            android:exported="false" />
+        <activity
+            android:name=".TaskRecyclerView"
+            android:exported="false" />
+        <activity
+            android:name=".TaskAdder"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
