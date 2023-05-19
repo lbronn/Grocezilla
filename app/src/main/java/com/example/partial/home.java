@@ -18,6 +18,7 @@ public class home extends AppCompatActivity {
     TextView tProfile;
     Button task;
     Button journal;
+    Button grocery;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,7 @@ public class home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         task = findViewById(R.id.btnJot);
         journal = findViewById(R.id.btnJournal);
+        grocery = findViewById(R.id.btnGroceryList);
         iHome = findViewById(R.id.homeic);
         tHome = findViewById(R.id.hometxt);
 
@@ -46,6 +48,15 @@ public class home extends AppCompatActivity {
             }
         });
 
+        journal.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, JournalAdder.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
         task.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -55,13 +66,14 @@ public class home extends AppCompatActivity {
             }
         });
 
-        journal.setOnClickListener(new View.OnClickListener() {
+        grocery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(home.this, JournalAdder.class);
+                Intent i = new Intent(home.this, feature_grocerylist.class);
                 startActivity(i);
                 finish();
             }
         });
+
     }
 }

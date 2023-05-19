@@ -269,7 +269,7 @@
                     android:lineSpacingMultiplier="1.0"/>
 
                 <Button
-                    android:id="@+id/btnWrite"
+                    android:id="@+id/btnPurchaseHistory"
                     android:layout_width="250dp"
                     android:layout_height="55dp"
                     android:layout_marginTop="150dp"
@@ -354,7 +354,7 @@
                     android:lineSpacingMultiplier="1.0"/>
 
                 <Button
-                    android:id="@+id/btnList"
+                    android:id="@+id/btnGroceryList"
                     android:layout_width="250dp"
                     android:layout_height="55dp"
                     android:layout_marginTop="150dp"
