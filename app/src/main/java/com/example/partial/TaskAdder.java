@@ -115,7 +115,9 @@ public class TaskAdder extends AppCompatActivity {
                     if(title.isEmpty() || desc.isEmpty() || due.isEmpty() || prio.isEmpty() || status.isEmpty()) {
                         Toast.makeText(context, "Please provide information on all fields.", Toast.LENGTH_SHORT).show();
                     } else {
-                        databaseReference.child("USERS").child(id).setValue(new AddTasks(id, title, desc, due, prio, status));
+                        String taskId = databaseReference.child("USERS").push().getKey(); // Generate a unique taskId
+                        AddTasks newTask = new AddTasks(taskId, title, desc, due, prio, status);
+                        databaseReference.child("USERS").child(taskId).setValue(newTask); // Set value at the new taskId
                         Toast.makeText(context, "Successfully added a new task!", Toast.LENGTH_SHORT).show();
                         dialog.dismiss();
                     }
