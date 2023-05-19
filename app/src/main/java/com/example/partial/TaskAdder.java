@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.annotation.SuppressLint;
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -15,8 +16,10 @@ import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -32,25 +35,35 @@ public class TaskAdder extends AppCompatActivity {
     RecyclerView recyclerView;
     ArrayList<AddTasks> addTasksArrayList;
     TaskRecyclerView adapter;
-    Button addTask;
+    FloatingActionButton addTask;
+    ImageButton backHome;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_task_adder);
-        FirebaseDatabase.getInstance().setPersistenceEnabled(true);
         databaseReference = FirebaseDatabase.getInstance().getReference();
         recyclerView = findViewById(R.id.recyclerView);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         addTasksArrayList = new ArrayList<>();
         addTask = findViewById(R.id.btnTaskAdd);
+        backHome = findViewById(R.id.taskToHome);
 
         addTask.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ViewDialogAdd viewDialogAdd = new ViewDialogAdd();
                 viewDialogAdd.showDialog(TaskAdder.this);
+            }
+        });
+
+        backHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(TaskAdder.this, home.class);
+                startActivity(i);
+                finish();
             }
         });
 

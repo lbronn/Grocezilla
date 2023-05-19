@@ -5,26 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
-    tools:context=".TaskAdder">
+    tools:context=".JournalAdder">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="30dp"
         android:id="@+id/journaltitle_bar_layout">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/page_title"
-            android:text="To-Do List"
+            android:text="Your Journals"
             android:textSize="32sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
 
         <ImageButton
-            android:id="@+id/taskToHome"
+            android:id="@+id/jourToHome"
             android:layout_width="36dp"
             android:layout_height="36dp"
             android:src="@drawable/backhome_icon"
@@ -37,14 +37,14 @@
     </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
+        android:id="@+id/journalrecyler_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/journaltitle_bar_layout" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnTaskAdd"
+        android:id="@+id/btnAddJournal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="@color/orange"

@@ -58,7 +58,7 @@ public class home extends AppCompatActivity {
         journal.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(home.this, featurejounal.class);
+                Intent i = new Intent(home.this, JournalAdder.class);
                 startActivity(i);
                 finish();
             }
