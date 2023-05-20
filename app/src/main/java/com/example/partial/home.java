@@ -29,6 +29,8 @@ public class home extends AppCompatActivity {
         grocery = findViewById(R.id.btnGroceryList);
         iHome = findViewById(R.id.homeic);
         tHome = findViewById(R.id.hometxt);
+        iProfile = findViewById(R.id.useric);
+        tProfile = findViewById(R.id.usertxt);
 
         iHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -70,6 +72,24 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(home.this, feature_grocerylist.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        iProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, Profile.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        tProfile.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, Profile.class);
                 startActivity(i);
                 finish();
             }

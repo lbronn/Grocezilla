@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Partial"
         tools:targetApi="31">
         <activity
+            android:name=".Profile"
+            android:exported="false" />
+        <activity
             android:name=".JournalAdder"
             android:exported="false" />
         <activity

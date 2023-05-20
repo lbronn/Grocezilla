@@ -77,15 +77,13 @@ public class login extends AppCompatActivity {
         remember = findViewById(R.id.loginRemember);
         createAccount = findViewById(R.id.createacc);
 
-//        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-//        String checkbox  = preferences.getString("remember", "");
-//        if(checkbox.equals("true")) {
-//            Intent i = new Intent(login.this, home.class);
-//            startActivity(i);
-//            finish();
-//        } else if(checkbox.equals("false")) {
-//            Toast.makeText(login.this, "Please Sign In.", Toast.LENGTH_SHORT).show();
-//        }
+        SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+        String checkbox  = preferences.getString("remember", "");
+        if(checkbox.equals("true")) {
+            Intent i = new Intent(login.this, home.class);
+            startActivity(i);
+            finish();
+        }
 
         createAccount.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,23 +139,21 @@ public class login extends AppCompatActivity {
             }
         });
 
-//        remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-//            @Override
-//            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-//                if(compoundButton.isChecked()) {
-//                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-//                    SharedPreferences.Editor editor = preferences.edit();
-//                    editor.putString("remember", "true");
-//                    editor.apply();
-////                    Toast.makeText(login.this, "Email and Password is Remembered.", Toast.LENGTH_SHORT).show();
-//                } else if(!compoundButton.isChecked()) {
-//                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
-//                    SharedPreferences.Editor editor = preferences.edit();
-//                    editor.putString("remember", "false");
-//                    editor.apply();
-////                    Toast.makeText(login.this, "Email and Password is not Remembered.", Toast.LENGTH_SHORT).show();
-//                }
-//            }
-//        });
+        remember.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
+                if(compoundButton.isChecked()) {
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "true");
+                    editor.apply();
+                } else if(!compoundButton.isChecked()) {
+                    SharedPreferences preferences = getSharedPreferences("checkbox", MODE_PRIVATE);
+                    SharedPreferences.Editor editor = preferences.edit();
+                    editor.putString("remember", "false");
+                    editor.apply();
+                }
+            }
+        });
     }
 }
