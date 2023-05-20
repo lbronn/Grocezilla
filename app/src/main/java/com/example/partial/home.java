@@ -71,7 +71,7 @@ public class home extends AppCompatActivity {
         grocery.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(home.this, feature_grocerylist.class);
+                Intent i = new Intent(home.this, GroceryAdder.class);
                 startActivity(i);
                 finish();
             }

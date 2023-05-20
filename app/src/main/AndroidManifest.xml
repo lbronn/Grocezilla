@@ -39,7 +39,7 @@
             android:name=".HelperClass"
             android:exported="false" />
         <activity
-            android:name=".feature_grocerylist"
+            android:name=".GroceryAdder"
             android:exported="false" />
         <activity
             android:name=".AddFeatureJournal"
@@ -64,6 +64,9 @@
             android:exported="false" />
         <activity
             android:name=".TaskAdderPersistence"
+            android:exported="false" />
+        <activity
+            android:name=".GroceryAdapter"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

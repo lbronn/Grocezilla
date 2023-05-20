@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:layout_marginBottom="20dp"
-        android:id="@+id/journaltitle_bar_layout">
+        android:id="@+id/tasktitle_bar_layout">
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@+id/journaltitle_bar_layout" />
+        android:layout_below="@+id/tasktitle_bar_layout" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
