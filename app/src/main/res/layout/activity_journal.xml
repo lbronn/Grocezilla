@@ -48,11 +48,11 @@
         android:id="@+id/btnAddJournal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@color/orange"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:backgroundTint="@color/orange"
         android:src="@drawable/add_vector"
-        />
+        tools:ignore="SpeakableTextPresentCheck" />
 
 
 

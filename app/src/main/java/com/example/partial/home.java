@@ -13,9 +13,11 @@ public class home extends AppCompatActivity {
     ImageView iHome;
     ImageView iGrocery;
     ImageView iProfile;
+    ImageView iChat;
     TextView tHome;
     TextView tGrocery;
     TextView tProfile;
+    TextView tChat;
     Button task;
     Button journal;
     Button grocery;
@@ -31,6 +33,8 @@ public class home extends AppCompatActivity {
         tHome = findViewById(R.id.hometxt);
         iProfile = findViewById(R.id.useric);
         tProfile = findViewById(R.id.usertxt);
+        iChat = findViewById(R.id.chatic);
+        tChat = findViewById(R.id.chattxt);
 
         iHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +49,24 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(home.this, home.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        iChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, MessageGPT.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        tChat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, MessageGPT.class);
                 startActivity(i);
                 finish();
             }

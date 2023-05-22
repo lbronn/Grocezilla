@@ -30,7 +30,7 @@
             android:name=".login"
             android:exported="false" />
         <activity
-            android:name=".message"
+            android:name=".MessageGPT"
             android:exported="false" />
         <activity
             android:name=".forgotpassword"

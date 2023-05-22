@@ -1,116 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".message">
+    android:background="@color/white"
+    tools:context=".MessageGPT">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/message_recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/message_bottomLayout" />
 
     <RelativeLayout
-        android:id="@+id/content_container"
+        android:id="@+id/message_bottomLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="80dp"
+        android:padding="8dp"
+        android:layout_alignParentBottom="true" >
 
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginLeft="112dp"
-            android:layout_marginTop="0dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginRight="112dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintVertical_bias="0.391"
-            app:srcCompat="@drawable/_9" />
-
-        <RelativeLayout
-            android:id="@+id/up"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <View
-                android:id="@+id/chattomenu"
-                android:layout_width="43dp"
-                android:layout_height="43dp"
-                android:layout_marginStart="10dp"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="47dp"
-                android:background="@drawable/back" />
-
-            <TextView
-                android:id="@+id/welcome_back"
-                android:layout_width="255dp"
-                android:layout_height="80dp"
-                android:layout_gravity="center_horizontal|center"
-                android:layout_marginStart="40dp"
-                android:layout_marginTop="80dp"
-                android:gravity="left|center"
-                android:text="@string/receiver"
-                android:lineSpacingExtra="10dp"
-                android:textColor="@color/white"
-                android:textSize="28sp"
-                android:textStyle="bold" />
-
-
-        </RelativeLayout>
-        <View
+        <EditText
+            android:id="@+id/messageInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="200dp"
-            android:layout_marginEnd="0dp"
-            android:background="@drawable/messagebg_rect" />
+            android:layout_centerInParent="true"
+            android:layout_toLeftOf="@+id/btnSendMessage"
+            android:background="@drawable/view_border"
+            android:fontFamily="sans-serif"
+            android:hint="Message"
+            android:padding="16dp"
+            android:textColor="@color/black" />
 
-        <RelativeLayout
-            android:id="@+id/send"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+        <ImageButton
+            android:id="@+id/btnSendMessage"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_marginStart="10dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:padding="8dp"
+            android:src="@drawable/send_icon" />
 
-            <View
-                android:layout_width="335dp"
-                android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_alignParentBottom="true"
-                android:layout_marginStart="42dp"
-                android:layout_marginTop="640dp"
-                android:layout_marginBottom="38dp"
-                android:background="@drawable/message_rect" />
-
-            <View
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginStart="330dp"
-
-                android:layout_marginTop="650dp"
-                android:layout_marginBottom="47dp"
-                android:background="@drawable/s1" />
-
-            <EditText
-                android:id="@+id/editname"
-                android:layout_width="280dp"
-                android:layout_height="40dp"
-                android:layout_marginLeft="65dp"
-                android:layout_marginTop="648dp"
-                android:autofillHints=""
-                android:backgroundTint="@android:color/transparent"
-                android:ems="10"
-                android:fontFamily="sans-serif"
-                android:gravity="left"
-                android:hint="Type your message here..."
-                android:inputType="textPersonName"
-                android:textColor="#000000"
-                android:textColorHint="#999595"
-                android:textSize="16sp"
-                android:foregroundTint="@color/orange"
-
-                tools:ignore="TextFields,TouchTargetSizeCheck" />
-        </RelativeLayout>
     </RelativeLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+</RelativeLayout>
