@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -33,6 +34,7 @@ public class MessageGPT extends AppCompatActivity {
     RecyclerView recyclerView;
     EditText inputMessage;
     ImageButton sendMessage;
+    ImageButton chatToHome;
     List<Message> messageList;
     MessageAdapter messageAdapter;
 
@@ -47,6 +49,7 @@ public class MessageGPT extends AppCompatActivity {
         recyclerView = findViewById(R.id.message_recyclerview);
         inputMessage = findViewById(R.id.messageInput);
         sendMessage = findViewById(R.id.btnSendMessage);
+        chatToHome = findViewById(R.id.messageToHome);
         messageList = new ArrayList<>();
 
         messageAdapter = new MessageAdapter(messageList);
@@ -62,6 +65,15 @@ public class MessageGPT extends AppCompatActivity {
                 addToChat(messageFromUser, Message.SENT_BY_ME);
                 callAPI(messageFromUser);
                 inputMessage.setText("");
+            }
+        });
+
+        chatToHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(MessageGPT.this, home.class);
+                startActivity(i);
+                finish();
             }
         });
     }

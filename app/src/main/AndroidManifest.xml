@@ -69,6 +69,12 @@
             android:name=".GroceryAdapter"
             android:exported="false" />
         <activity
+            android:name=".MessageAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".Message"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

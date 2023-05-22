@@ -26,4 +26,8 @@
     <string name="enter_your_email_address">Enter your email address</string>
     <string name="enter_your_password">Enter your password</string>
     <string name="email">Email</string>
+    <string name="det">Add a pinch of flavor to your culinary creations &#10;with our high-quality salt. Made from premium &#10;ingredients and carefully processed, our salt is &#10;a must-have for every kitchen.</string>
+    <string name="sm_supermarket">SM Supermarket\nLanders\nRustan\'s Marketplace\nS&amp;R</string>
+    <string name="revi">Grocezilla best app 2023!</string>
+    <string name="are_you_sure_you_want_to_delete_task_this_action_cannot_be_undone_and_you_will_not_be_able_to_recover_the_data">Are you sure you want to delete task? \n\n You can\'t undo this action.</string>
 </resources>

@@ -4,14 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     android:background="@color/white"
     tools:context=".MessageGPT">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="30dp"
+        android:id="@+id/messagetitle_bar_layout">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/messagepage_title"
+            android:text="Grocer Assistant"
+            android:textSize="32sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <ImageButton
+            android:id="@+id/messageToHome"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="BacktoHome"
+            android:src="@drawable/backhome_icon"
+            app:tint="@color/orange"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </RelativeLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/message_recyclerview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_above="@+id/message_bottomLayout" />
+        android:layout_above="@+id/message_bottomLayout"
+        android:layout_below="@+id/messagetitle_bar_layout"/>
 
     <RelativeLayout
         android:id="@+id/message_bottomLayout"
@@ -41,7 +73,8 @@
             android:layout_marginStart="10dp"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:padding="8dp"
-            android:src="@drawable/send_icon" />
+            android:src="@drawable/send_icon"
+            tools:ignore="SpeakableTextPresentCheck" />
 
     </RelativeLayout>
 

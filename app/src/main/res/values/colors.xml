@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_200">#FFFFFFFF</color>
     <color name="purple_500">#FFFFFF</color>
     <color name="purple_700">#F61A08</color>
     <color name="teal_200">#FF03DAC5</color>
@@ -13,5 +13,9 @@
     <color name="btn_home">#63F61A08</color>
     <color name="checkbox_color">#FFFCFC</color>
     <color name="red">#940102</color>
+    <color name="lorange">#FD8A52</color>
+    <color name="or">#FAE2D6</color>
+    <color name="grey">#CFCFCF</color>
+    <color name="legitorange">#FF661B</color>
 
 </resources>
