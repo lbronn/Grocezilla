@@ -20,6 +20,7 @@ public class home extends AppCompatActivity {
     TextView tChat;
     Button task;
     Button journal;
+    Button purchased;
     Button grocery;
 
     @Override
@@ -28,6 +29,7 @@ public class home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         task = findViewById(R.id.btnJot);
         journal = findViewById(R.id.btnJournal);
+        purchased = findViewById(R.id.btnPurchaseHistory);
         grocery = findViewById(R.id.btnGroceryList);
         iHome = findViewById(R.id.homeic);
         tHome = findViewById(R.id.hometxt);
@@ -85,6 +87,15 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent i = new Intent(home.this, TaskAdder.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        purchased.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, PurchaseHistoryAdder.class);
                 startActivity(i);
                 finish();
             }

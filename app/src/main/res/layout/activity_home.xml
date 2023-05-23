@@ -234,7 +234,7 @@
             </RelativeLayout>
 
             <RelativeLayout
-                android:id="@+id/history"
+                android:id="@+id/budget"
                 android:layout_width="500dp"
                 android:layout_height="215dp"
                 android:layout_marginTop="730dp">
@@ -275,7 +275,7 @@
                     android:layout_marginTop="150dp"
                     android:layout_marginBottom="2dp"
                     android:layout_marginStart="80dp"
-                    android:text="View History"
+                    android:text="View Purchases"
                     android:textSize="14sp"
                     android:textColor="@color/white"
 
