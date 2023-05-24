@@ -1,6 +1,7 @@
 package com.example.partial;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -27,8 +28,10 @@ import java.util.ArrayList;
 public class GroceryAdder extends AppCompatActivity {
     ImageButton groceryToHome;
     ImageView grocerAdd;
+    ImageView goToBudgetView;
     static ListView listView;
     EditText groceryInput;
+    AppCompatButton addBudget;
     static ArrayList<GroceryItem> groceryItems;
     static GroceryAdapter adapter;
 
@@ -39,6 +42,8 @@ public class GroceryAdder extends AppCompatActivity {
         grocerAdd = findViewById(R.id.groceryItemAdd);
         groceryToHome = findViewById(R.id.grocerToHome);
         groceryInput = findViewById(R.id.groceryItemInput);
+        addBudget = findViewById(R.id.btnAddBudget);
+        goToBudgetView = findViewById(R.id.groceryBudgetView);
         listView = findViewById(R.id.groceryListView);
 
         groceryItems = new ArrayList<>();
@@ -60,6 +65,24 @@ public class GroceryAdder extends AppCompatActivity {
                 add(item);
                 groceryInput.setText("");
                 Toast.makeText(GroceryAdder.this, item + " is added to the list!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        addBudget.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(GroceryAdder.this, AddBudget.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        goToBudgetView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(GroceryAdder.this, BudgetAdder.class);
+                startActivity(i);
+                finish();
             }
         });
 

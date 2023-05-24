@@ -4,80 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@drawable/_8">
 
 
     <View
-        android:id="@+id/back"
+        android:id="@+id/backToGroceryList"
         android:layout_width="30dp"
         android:layout_height="30dp"
-        android:background="@drawable/orange"
+        android:background="@drawable/arrow_back"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.045" />
+        app:layout_constraintVertical_bias="0.068" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/budgetPageTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add a Budget for Today's Run"
-        android:textColor="@color/legitorange"
+        android:textColor="@color/white"
         android:textSize="24dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.284"
+        app:layout_constraintHorizontal_bias="0.221"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.114" />
-
-    <TextView
-        android:id="@+id/tv2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Budget Title"
-        android:textColor="@color/black"
-        android:textSize="16dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.074"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.191" />
-
-    <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Budget Amount"
-        android:textColor="@color/black"
-        android:textSize="16dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.349" />
-
-    <TextView
-        android:id="@+id/tv3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Budget Details"
-        android:textColor="@color/black"
-        android:textSize="16dp"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.076"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.513" />
+        app:layout_constraintVertical_bias="0.164" />
 
     <RelativeLayout
         android:id="@+id/grname"
@@ -88,7 +43,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.249">
+        app:layout_constraintVertical_bias="0.304">
 
         <View
             android:id="@+id/rect"
@@ -108,9 +63,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="85dp"
+            android:layout_marginTop="5dp"
             android:text="Budget Name"
             android:textSize="14dp"
-            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.233"
@@ -119,7 +76,7 @@
             app:layout_constraintVertical_bias="0.25" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/editBudgetName"
             android:layout_width="293dp"
             android:layout_height="46dp"
             android:layout_marginStart="82dp"
@@ -128,8 +85,9 @@
             android:backgroundTint="@android:color/transparent"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Enter name"
-            android:textStyle="bold"
+            android:hint="Enter budget name"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.644"
@@ -145,10 +103,10 @@
         android:layout_height="68dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.417">
+        app:layout_constraintVertical_bias="0.473">
 
         <View
             android:id="@+id/rect2"
@@ -164,7 +122,7 @@
             app:layout_constraintVertical_bias="0.251" />
 
         <EditText
-            android:id="@+id/editAmount"
+            android:id="@+id/editBudgetAmount"
             android:layout_width="293dp"
             android:layout_height="46dp"
             android:layout_marginStart="82dp"
@@ -173,8 +131,9 @@
             android:backgroundTint="@android:color/transparent"
             android:ems="10"
             android:inputType="numberDecimal|text"
-            android:text="Enter Amount"
-            android:textStyle="bold"
+            android:hint="Enter Amount"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.644"
@@ -190,6 +149,8 @@
             android:layout_marginTop="5dp"
             android:text="Amount"
             android:textSize="14dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.233"
@@ -200,16 +161,46 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget Title"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.244" />
+
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget Details"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.565" />
+
     <RelativeLayout
         android:id="@+id/grname2"
         android:layout_width="match_parent"
         android:layout_height="68dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.595">
+        app:layout_constraintVertical_bias="0.651">
 
         <View
             android:id="@+id/rect3"
@@ -223,6 +214,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.251" />
+
         <TextView
             android:id="@+id/textView5"
             android:layout_width="wrap_content"
@@ -231,6 +223,8 @@
             android:layout_marginTop="5dp"
             android:text="Description"
             android:textSize="14dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.233"
@@ -239,7 +233,7 @@
             app:layout_constraintVertical_bias="0.25" />
 
         <EditText
-            android:id="@+id/editDescription"
+            android:id="@+id/editBudgetDescription"
             android:layout_width="293dp"
             android:layout_height="46dp"
             android:layout_marginStart="82dp"
@@ -248,8 +242,9 @@
             android:backgroundTint="@android:color/transparent"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Enter short text"
-            android:textStyle="bold"
+            android:hint="Enter short text"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.644"
@@ -259,13 +254,28 @@
 
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Budget Amount"
+        android:textColor="@color/white"
+        android:textSize="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.093"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.401" />
+
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/buttonYesDel"
+        android:id="@+id/btnBudgetAdder"
         android:layout_width="242dp"
         android:layout_height="50dp"
-        android:background="@color/legitorange"
+        android:background="@color/white"
         android:text="Add Budget"
-        android:textColor="@android:color/white"
+        android:textColor="@color/orange"
         android:textSize="16dp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -273,5 +283,22 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.73" />
+        app:layout_constraintVertical_bias="0.847" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnBudgetDeleter"
+        android:layout_width="242dp"
+        android:layout_height="50dp"
+        android:background="@color/white"
+        android:text="Delete Budget"
+        android:textColor="@color/orange"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

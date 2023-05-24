@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Partial"
         tools:targetApi="31">
         <activity
+            android:name=".BudgetAdder"
+            android:exported="false" />
+        <activity
             android:name=".PurchaseHistoryAdder"
             android:exported="false" />
         <activity
@@ -91,6 +94,12 @@
             android:exported="false" />
         <activity
             android:name=".PurchaseHistory"
+            android:exported="false" />
+        <activity
+            android:name=".AddBudget"
+            android:exported="false" />
+        <activity
+            android:name=".BudgetHelper"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

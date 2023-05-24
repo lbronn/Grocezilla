@@ -49,8 +49,9 @@
             android:id="@+id/groceryItemInput"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:ems="10"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="27sp"
+            android:ems="11"
             android:hint="Enter an item here"
             android:textColor="@color/black"
             tools:ignore="TouchTargetSizeCheck" />
@@ -64,14 +65,39 @@
             android:layout_centerVertical="true"
             android:src="@drawable/addlist_icon" />
 
+        <ImageView
+            android:id="@+id/groceryBudgetView"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_toRightOf="@+id/groceryItemAdd"
+            android:layout_marginLeft="7sp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/budgetview_icon" />
 
     </RelativeLayout>
 
     <ListView
         android:id="@+id/groceryListView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="450dp"
         android:layout_below="@+id/groceryHeader"
         android:layout_marginTop="20dp" />
 
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnAddBudget"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_below="@id/groceryListView"
+        android:layout_marginTop="25dp"
+        android:background="@color/orange"
+        android:text="Add Budget"
+        android:textColor="@android:color/white"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.944" />
 </RelativeLayout>
