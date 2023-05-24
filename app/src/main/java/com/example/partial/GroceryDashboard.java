@@ -45,24 +45,24 @@ public class GroceryDashboard extends AppCompatActivity {
             }
         });
 
-//        imgProductCheck.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(GroceryDashboard.this, GroceryAdder.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
-//
-//        txtProductCheck.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent i = new Intent(GroceryDashboard.this, GroceryAdder.class);
-//                startActivity(i);
-//                finish();
-//            }
-//        });
-//
+        imgProductCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(GroceryDashboard.this, ProductCheckerAdder.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        txtProductCheck.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(GroceryDashboard.this, ProductCheckerAdder.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
         imgProductReview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -15,6 +15,9 @@
         android:theme="@style/Theme.Partial"
         tools:targetApi="31">
         <activity
+            android:name=".ProductCheckerAdder"
+            android:exported="false" />
+        <activity
             android:name=".ProductReviewAdder"
             android:exported="false" />
         <activity
@@ -115,6 +118,18 @@
             android:exported="false" />
         <activity
             android:name=".ReviewRecyclerView"
+            android:exported="false" />
+        <activity
+            android:name=".AddFeatureChecker"
+            android:exported="false" />
+        <activity
+            android:name=".ProductCheckerHelper"
+            android:exported="false" />
+        <activity
+            android:name=".ProductCheckerAdapter"
+            android:exported="false" />
+        <activity
+            android:name=".ProductChecker"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
