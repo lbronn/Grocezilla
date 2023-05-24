@@ -2,5 +2,5 @@
 <shape xmlns:android="http://schemas.android.com/apk/res/android">
     <solid android:color="@color/white"/> <!-- Change this to your desired view color-->
     <corners android:radius="20dp"/>
-    <stroke android:width="3dp" android:color="@color/orange"/> <!-- Change this to your desired border color and width -->
+    <stroke android:width="2dp" android:color="@color/legitorange"/> <!-- Change this to your desired border color and width -->
 </shape>

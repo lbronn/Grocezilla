@@ -4,53 +4,61 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="@color/white"
+    android:background="@drawable/optionpane"
     tools:context=".MessageGPT">
 
+
     <RelativeLayout
+        android:id="@+id/messagetitle_bar_layout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:layout_marginBottom="30dp"
-        android:id="@+id/messagetitle_bar_layout">
+        android:layout_height="611dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp">
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/messagepage_title"
-            android:text="Grocer Assistant"
-            android:textSize="32sp"
-            android:textColor="@color/black"
-            android:textStyle="bold"/>
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/message_rect"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            app:tint="@color/white" />
 
-        <ImageButton
-            android:id="@+id/messageToHome"
-            android:layout_width="36dp"
-            android:layout_height="36dp"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/message_recyclerview"
+            android:layout_width="320dp"
+            android:layout_height="456dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:contentDescription="BacktoHome"
-            android:src="@drawable/backhome_icon"
-            app:tint="@color/orange"
-            tools:ignore="TouchTargetSizeCheck" />
-
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginBottom="135dp" />
     </RelativeLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/message_recyclerview"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_above="@+id/message_bottomLayout"
-        android:layout_below="@+id/messagetitle_bar_layout"/>
 
     <RelativeLayout
         android:id="@+id/message_bottomLayout"
         android:layout_width="match_parent"
         android:layout_height="80dp"
-        android:padding="8dp"
-        android:layout_alignParentBottom="true" >
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="652dp"
+        android:layout_marginBottom="-1dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginEnd="25dp"
+        android:padding="8dp">
 
         <EditText
             android:id="@+id/messageInput"
@@ -60,24 +68,59 @@
             android:layout_toLeftOf="@+id/btnSendMessage"
             android:background="@drawable/view_border"
             android:fontFamily="sans-serif"
-            android:hint="Message"
-            android:padding="16dp"
-            android:textColor="@color/black" />
+            android:hint="Type Message"
+            android:padding="15dp"
+            android:textColor="@color/grey" />
 
         <ImageButton
             android:id="@+id/btnSendMessage"
-            android:layout_width="48dp"
-            android:layout_height="48dp"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
             android:layout_alignParentEnd="true"
             android:layout_centerInParent="true"
             android:layout_marginStart="10dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:padding="8dp"
+            android:padding="6dp"
             android:src="@drawable/send_icon"
+            app:tint="@color/legitorange"
             tools:ignore="SpeakableTextPresentCheck" />
 
     </RelativeLayout>
 
+    <ImageButton
+        android:id="@+id/messageToHome"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="59dp"
+        android:layout_marginEnd="362dp"
+        android:layout_marginBottom="648dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:contentDescription="BacktoHome"
+        android:src="@drawable/backhome_icon"
+        app:tint="@color/white"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <TextView
+        android:id="@+id/messagepage_title"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="69dp"
+        android:layout_marginTop="54dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="643dp"
+        android:text="Grocer Buddy"
+        android:textColor="@color/white"
+        android:textSize="26sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

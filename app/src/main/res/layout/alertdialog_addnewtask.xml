@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="410dp"
-    android:layout_height="wrap_content"
+    android:layout_width="320dp"
+    android:layout_height="430dp"
     android:layoutDirection="ltr"
-    app:cardBackgroundColor="@android:color/white"
+    android:backgroundTint="@color/very"
+    android:layout_gravity="center_horizontal"
     app:cardCornerRadius="5dp">
 
     <LinearLayout
-        android:layout_width="410dp"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/very"
         android:orientation="vertical"
         android:padding="10dp">
 
@@ -19,12 +21,13 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="@drawable/edittext_bg"
+
+            android:background="@color/white"
             android:gravity="center"
             android:hint="Task Title"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -34,12 +37,13 @@
             android:layout_height="100dp"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="@drawable/edittext_bg"
+
+            android:background="@color/white"
             android:gravity="center"
             android:hint="Task Description"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -49,12 +53,13 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="@drawable/edittext_bg"
+
+            android:background="@color/white"
             android:gravity="center"
             android:hint="Due Date"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -64,12 +69,13 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="@drawable/edittext_bg"
+
+            android:background="@color/white"
             android:gravity="center"
             android:hint="Priority Level"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -79,35 +85,41 @@
             android:layout_height="40dp"
             android:layout_gravity="center"
             android:layout_margin="3dp"
-            android:background="@drawable/edittext_bg"
+
+            android:background="@color/white"
             android:gravity="center"
             android:hint="Task Status"
             android:padding="5dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/buttonAdd"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="274dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="15sp"
-            android:background="@color/orange"
-            android:text="Add"
+            android:backgroundTint="@color/legitorange"
+            android:text="ADD"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="17dp"
             android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/buttonExit"
-            android:layout_width="match_parent"
-            android:layout_height="50sp"
+            style="@style/Widget.Material3.Button.TonalButton"
+            android:layout_width="272dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:background="@color/orange"
-            android:text="Exit"
-            android:textColor="@color/white"
-            android:textSize="20dp"
+            android:backgroundTint="@color/white"
+            android:text="EXIT"
+            android:textColor="@color/legitorange"
+            android:textSize="17dp"
             android:textStyle="bold" />
+
     </LinearLayout>
 </androidx.cardview.widget.CardView>

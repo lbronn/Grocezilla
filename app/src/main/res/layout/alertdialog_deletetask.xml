@@ -13,7 +13,7 @@
         android:layout_width="match_parent"
         android:layout_height="251dp"
         android:layout_marginTop="0dp"
-        android:background="@drawable/optionpane"
+        android:background="@color/very"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -23,66 +23,82 @@
         tools:ignore="MissingConstraints">
 
 
+        <View
+            android:id="@+id/line"
+            android:layout_width="200dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="197dp"
+            android:background="@drawable/ic_rem"
+            android:backgroundTint="@color/legitorange" />
+
         <TextView
             android:id="@+id/textTitle"
-            android:layout_width="match_parent"
-            android:layout_height="38dp"
+            android:layout_width="wrap_content"
+            android:layout_height="56dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_gravity=""
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="175dp"
+            android:layout_marginStart="-1dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="1dp"
+            android:layout_marginBottom="149dp"
             android:gravity="center"
             android:padding="5dp"
             android:text="Confirm delete?"
             android:textColor="@android:color/black"
-            android:textSize="16sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/cont"
             android:layout_width="204dp"
-            android:layout_height="93dp"
+            android:layout_height="80dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_gravity="center"
-            android:layout_marginStart="0dp"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="0dp"
-            android:layout_marginBottom="85dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="91dp"
+            android:layout_marginEnd="-2dp"
+            android:layout_marginBottom="75dp"
             android:gravity="center"
             android:padding="5dp"
             android:text="@string/are_you_sure_you_want_to_delete_task_this_action_cannot_be_undone_and_you_will_not_be_able_to_recover_the_data"
             android:textColor="@android:color/black"
             android:textSize="14sp" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/buttonYesDel"
+            style="@style/Widget.Material3.Button.TonalButton"
             android:layout_width="wrap_content"
             android:layout_height="37dp"
-
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="40dp"
-            android:layout_marginTop="195dp"
-            android:layout_marginEnd="165dp"
-            android:layout_marginBottom="19dp"
-            android:background="@color/orange"
-            android:text="Delete"
+            android:layout_marginTop="182dp"
+            android:layout_marginEnd="166dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="@color/legitorange"
+            android:text="DELETE"
             android:textColor="@android:color/white"
-            android:textSize="14dp"
+            android:textSize="13dp"
             android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <Button
             android:id="@+id/buttonNoDel"
+            style="@style/Widget.Material3.Button.TonalButton"
             android:layout_width="wrap_content"
             android:layout_height="37dp"
             android:layout_alignParentStart="true"
@@ -91,14 +107,15 @@
             android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
             android:layout_marginStart="165dp"
-            android:layout_marginTop="195dp"
+            android:layout_marginTop="181dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginBottom="19dp"
-            android:background="@color/white"
-            android:text="Cancel"
-            android:textColor="@color/orange"
-            android:textSize="16dp"
+            android:layout_marginBottom="25dp"
+            android:backgroundTint="@color/white"
+            android:text="CANCEL"
+            android:textColor="@color/legitorange"
+            android:textSize="13dp"
             android:textStyle="bold" />
+
 
     </RelativeLayout>
 

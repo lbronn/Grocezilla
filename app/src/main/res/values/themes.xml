@@ -3,7 +3,7 @@
     <style name="Theme.Partial" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/white</item>
-        <item name="colorPrimaryVariant">@color/orange</item>
+        <item name="colorPrimaryVariant">@color/legitorange</item>
         <item name="colorOnPrimary">@color/orange</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/white</item>
