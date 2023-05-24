@@ -29,7 +29,8 @@ public class PurchaseHistoryAdapter extends FirestoreRecyclerAdapter<PurchaseHis
     protected void onBindViewHolder(@NonNull PurchaseViewHolder holder,  int position, @NonNull PurchaseHistory purchaseHistory) {
         holder.purchaseTitleRecycle.setText(purchaseHistory.purchaseTitle);
         holder.purchaseDescRecycle.setText(purchaseHistory.purchaseDescription);
-        holder.purchaseAmountRecycle.setText(purchaseHistory.totalExpenses);
+        String totalExpenseWithPeso = "₱" + purchaseHistory.totalExpenses;
+        holder.purchaseAmountRecycle.setText(totalExpenseWithPeso);
 
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override

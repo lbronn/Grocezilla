@@ -1,44 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="15sp">
+    android:layout_height="wrap_content"
+    android:padding="15sp"
+    android:orientation="horizontal"
+    android:gravity="center_vertical">
 
     <TextView
         android:id="@+id/groceryItemNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/groceryItemName"
         android:layout_marginBottom="2sp"
         android:textColor="@color/orange"
         android:textStyle="bold" />
 
     <TextView
         android:id="@+id/groceryItemName"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
-        android:layout_centerVertical="true"
         android:layout_marginLeft="28sp"
         android:textColor="@color/black"
         android:textSize="20sp" />
-    
+
     <ImageView
         android:id="@+id/copyGroceryItem"
         android:layout_width="22sp"
         android:layout_height="22sp"
-        android:layout_centerVertical="true"
-        android:layout_toLeftOf="@+id/removeGroceryItem"
-        android:layout_marginRight="18sp"
-        android:src="@drawable/copy_icon"/>
+        android:src="@drawable/add_icon"/>
+
+    <ImageView
+        android:id="@+id/decrementGroceryItem"
+        android:layout_width="22sp"
+        android:layout_height="22sp"
+        android:layout_marginLeft="15sp"
+        android:src="@drawable/remove_icon"/>
 
     <ImageView
         android:id="@+id/removeGroceryItem"
         android:layout_width="22sp"
         android:layout_height="22sp"
-        android:layout_centerVertical="true"
-        android:layout_marginRight="18sp"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/remove_icon"/>
+        android:layout_marginLeft="15sp"
+        android:src="@drawable/delete_icon"/>
 
-
-</RelativeLayout>
+</LinearLayout>

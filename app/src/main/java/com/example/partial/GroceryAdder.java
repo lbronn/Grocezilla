@@ -1,35 +1,35 @@
 package com.example.partial;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.widget.ListViewAutoScrollHelper;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.gson.Gson;
+import com.google.gson.JsonSyntaxException;
+import com.google.gson.reflect.TypeToken;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 public class GroceryAdder extends AppCompatActivity {
-    ImageView grocerAdd;
     ImageButton groceryToHome;
+    ImageView grocerAdd;
     static ListView listView;
     EditText groceryInput;
-    static ArrayList<String> groceryItems;
+    static ArrayList<GroceryItem> groceryItems;
     static GroceryAdapter adapter;
 
     @Override
@@ -43,37 +43,23 @@ public class GroceryAdder extends AppCompatActivity {
 
         groceryItems = new ArrayList<>();
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String name = groceryItems.get(i);
-                Toast.makeText(GroceryAdder.this, name, Toast.LENGTH_SHORT).show();
-            }
-        });
-
         adapter = new GroceryAdapter(getApplicationContext(), groceryItems);
         listView.setAdapter(adapter);
 
-        groceryToHome.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(GroceryAdder.this, home.class);
-                startActivity(i);
-                finish();
-            }
+        groceryToHome.setOnClickListener(view -> {
+            Intent i = new Intent(GroceryAdder.this, home.class);
+            startActivity(i);
+            finish();
         });
 
-        grocerAdd.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String item = groceryInput.getText().toString();
-                if(item.isEmpty()) {
-                    Toast.makeText(GroceryAdder.this, "Please enter an item!", Toast.LENGTH_SHORT).show();
-                } else {
-                    addItem(item);
-                    groceryInput.setText("");
-                    Toast.makeText(GroceryAdder.this, item + " is added to the list!", Toast.LENGTH_SHORT).show();
-                }
+        grocerAdd.setOnClickListener(view -> {
+            String item = groceryInput.getText().toString();
+            if(item.isEmpty()) {
+                Toast.makeText(GroceryAdder.this, "Please enter an item!", Toast.LENGTH_SHORT).show();
+            } else {
+                add(item);
+                groceryInput.setText("");
+                Toast.makeText(GroceryAdder.this, item + " is added to the list!", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -83,60 +69,107 @@ public class GroceryAdder extends AppCompatActivity {
     public void loadContent() {
         File path = getApplicationContext().getFilesDir();
         File readFrom = new File(path, "groceryList.txt");
-        byte[] content = new byte[(int) readFrom.length()];
+        Gson gson = new Gson();
+        if (readFrom.exists() && readFrom.length() != 0) {
+            try {
+                FileInputStream stream = new FileInputStream(readFrom);
+                InputStreamReader reader = new InputStreamReader(stream);
+                Type listType = new TypeToken<ArrayList<GroceryItem>>() {}.getType();
 
-        FileInputStream stream = null;
-        try {
-            stream = new FileInputStream(readFrom);
-            stream.read(content);
-
-            String grocerString = new String(content);
-            if (grocerString.length() > 2) {
-                grocerString = grocerString.substring(1, grocerString.length() - 1);
-                String split[] = grocerString.split(", ");
-                if(split.length == 1 && split[0].isEmpty()) {
-                    groceryItems = new ArrayList<>();
-                } else {
-                    groceryItems = new ArrayList<>(Arrays.asList(split));
+                ArrayList<GroceryItem> items;
+                try {
+                    items = gson.fromJson(reader, listType);
+                } catch (JsonSyntaxException e) {
+                    e.printStackTrace();
+                    items = new ArrayList<>();
                 }
-            } else {
-                groceryItems = new ArrayList<>();
-            }
 
-            adapter = new GroceryAdapter(this, groceryItems);
-            listView.setAdapter(adapter);
-        } catch (Exception e) {
-            throw new RuntimeException(e);
+                groceryItems.clear(); // Clear the existing items
+                if (items != null) {
+                    groceryItems.addAll(items); // Add the loaded items
+                }
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+        adapter.notifyDataSetChanged(); // Notify the adapter that data set has changed
     }
+
 
     @Override
     protected void onDestroy() {
         File path = getApplicationContext().getFilesDir();
         try {
             FileOutputStream writer = new FileOutputStream(new File(path, "groceryList.txt"));
-            writer.write(groceryItems.toString().getBytes());
-            writer.close();
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(writer);
+            Gson gson = new Gson();
+            gson.toJson(groceryItems, outputStreamWriter);
+            outputStreamWriter.close();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
         super.onDestroy();
     }
 
-    public static void addItem(String item) {
-        groceryItems.add(item);
-        listView.setAdapter(adapter);
+    public static void add(String item) {
+        GroceryItem groceryItem = new GroceryItem(item, 1);
+        groceryItems.add(groceryItem);
+        if (adapter != null) {
+            adapter.notifyDataSetChanged();
+        }
+        saveData();
+    }
+
+    public static void addItemQuantity(int position) {
+        GroceryItem item = groceryItems.get(position);
+        item.setGroceryQuantity(item.getGroceryQuantity() + 1);
+        if (adapter != null) {
+            adapter.notifyDataSetChanged();
+        }
+        saveData();
+    }
+
+    public static void decrementItemQuantity(int position) {
+        GroceryItem item = groceryItems.get(position);
+        if (item.getGroceryQuantity() > 1) {
+            item.setGroceryQuantity(item.getGroceryQuantity() - 1);
+            if (adapter != null) {
+                adapter.notifyDataSetChanged();
+            }
+        } else {
+            Toast.makeText(listView.getContext(), "Quantity cannot be less than 1!", Toast.LENGTH_SHORT).show();
+        }
+        saveData();
     }
 
     public static void removeItem(int removedItem) {
         groceryItems.remove(removedItem);
-        listView.setAdapter(adapter);
+        if (adapter != null) {
+            adapter.notifyDataSetChanged();
+        }
+        saveData();
 
         File path = listView.getContext().getFilesDir();
         try {
             FileOutputStream writer = new FileOutputStream(new File(path, "groceryList.txt"));
-            writer.write(groceryItems.toString().getBytes());
-            writer.close();
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(writer);
+            Gson gson = new Gson();
+            gson.toJson(groceryItems, outputStreamWriter);
+            outputStreamWriter.close();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
+    public static void saveData() {
+        File path = listView.getContext().getFilesDir();
+        try {
+            FileOutputStream writer = new FileOutputStream(new File(path, "groceryList.txt"));
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(writer);
+            Gson gson = new Gson();
+            gson.toJson(groceryItems, outputStreamWriter);
+            outputStreamWriter.close();
         } catch (Exception e) {
             throw new RuntimeException(e);
         }
