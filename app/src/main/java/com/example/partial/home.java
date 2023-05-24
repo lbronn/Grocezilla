@@ -37,6 +37,8 @@ public class home extends AppCompatActivity {
         tProfile = findViewById(R.id.usertxt);
         iChat = findViewById(R.id.chatic);
         tChat = findViewById(R.id.chattxt);
+        iGrocery = findViewById(R.id.groceryic);
+        tGrocery = findViewById(R.id.grocerytxt);
 
         iHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -110,6 +112,24 @@ public class home extends AppCompatActivity {
             }
         });
 
+        iGrocery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, GroceryDashboard.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
+        tGrocery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(home.this, GroceryDashboard.class);
+                startActivity(i);
+                finish();
+            }
+        });
+
         iProfile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -127,6 +147,5 @@ public class home extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }

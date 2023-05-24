@@ -33,4 +33,5 @@
     <string name="interact_with_an_ai_assistant_that_is_ready_to_assist_you_with_your_grocery_or_task_related_needs">Interact with an AI assistant that \nis ready to assist you with your grocery or task-related needs.</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="are_you_sure_you_want_to_delete_this_review_n_n_you_can_t_undo_this_action">Are you sure you want to delete this review?\n\n You can\'t undo this action.</string>
 </resources>
