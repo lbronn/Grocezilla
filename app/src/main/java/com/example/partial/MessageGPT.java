@@ -106,7 +106,7 @@ public class MessageGPT extends AppCompatActivity {
         RequestBody body = RequestBody.create(jsonBody.toString(), JSON);
         Request request = new Request.Builder()
                 .url("https://api.openai.com/v1/completions")
-                .header("Authorization", "Bearer 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")
+                .header("Authorization", "Bearer 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")
                 .post(body)
                 .build();
         client.newCall(request).enqueue(new Callback() {
