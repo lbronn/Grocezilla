@@ -96,17 +96,17 @@ public class MessageGPT extends AppCompatActivity {
     public void callAPI(String userMessage) {
         JSONObject jsonBody = new JSONObject();
         try {
-            jsonBody.put("model", "text-davinci-003");
+            jsonBody.put("model", "gpt-4o-mini");
             jsonBody.put("prompt", userMessage);
-            jsonBody.put("max_tokens", 4000);
+            jsonBody.put("max_tokens", 16384);
             jsonBody.put("temperature", 0);
         } catch (JSONException e) {
             throw new RuntimeException(e);
         }
         RequestBody body = RequestBody.create(jsonBody.toString(), JSON);
         Request request = new Request.Builder()
-                .url("https://api.openai.com/v1/completions")
-                .header("Authorization", "Bearer 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")
+                .url("https://api.openai.com/v1/chat/completions")
+                .header("Authorization", "Bearer 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")
                 .post(body)
                 .build();
         client.newCall(request).enqueue(new Callback() {
